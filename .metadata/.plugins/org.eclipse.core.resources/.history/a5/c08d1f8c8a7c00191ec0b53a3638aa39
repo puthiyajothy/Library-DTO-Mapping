@@ -1,0 +1,11 @@
+package com.dtospringboot.dto;
+
+public class SubclassificationDTO {
+	
+	private Long subId;
+	private String subName;
+
+	
+
+	
+}

@@ -1,0 +1,33 @@
+package com.dtospringboot.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@SuppressWarnings("serial")
+@Entity
+@Table(name="subclassification")
+public class SubClassification  implements Serializable{
+	
+	private Long subclassificationId;
+	private String subclassificationName;
+	
+	
+	public Long getSubclassificationId() {
+		return subclassificationId;
+	}
+	public void setSubclassificationId(Long subclassificationId) {
+		this.subclassificationId = subclassificationId;
+	}
+	public String getSubclassificationName() {
+		return subclassificationName;
+	}
+	public void setSubclassificationName(String subclassificationName) {
+		this.subclassificationName = subclassificationName;
+	}
+	
+	
+	
+	
+	}

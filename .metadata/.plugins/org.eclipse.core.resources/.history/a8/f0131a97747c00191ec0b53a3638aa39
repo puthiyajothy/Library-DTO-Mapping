@@ -1,0 +1,5 @@
+package com.dtospringboot.repository;
+
+public interface SubClassificationRepository {
+
+}

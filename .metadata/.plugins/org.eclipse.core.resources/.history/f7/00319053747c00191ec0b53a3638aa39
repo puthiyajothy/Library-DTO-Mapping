@@ -1,0 +1,25 @@
+package com.dtospringboot.mapper;
+
+import org.modelmapper.ModelMapper;
+import org.modelmapper.PropertyMap;
+
+import org.springframework.stereotype.Service;
+
+import com.dtospringboot.dto.ClassificationDTO;
+import com.dtospringboot.model.Classification;
+
+@Service
+public class SubclassificationDTOMapper {
+
+	ModelMapper modelMapper = new ModelMapper();
+
+	PropertyMap<SubclassificationDTO, Classification> classificationMap = new PropertyMap<ClassificationDTO, Classification>() {
+		protected void configure() {
+			map().setClassName(source.getMainclassName());
+
+//			  map().getSubClassification().setSubClassId(source.getSubClassId());
+		}
+	};
+
+	
+}

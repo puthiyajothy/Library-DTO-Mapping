@@ -1,0 +1,45 @@
+package com.dtospringboot.mapper;
+
+import org.modelmapper.ModelMapper;
+import org.modelmapper.PropertyMap;
+import org.modelmapper.TypeMap;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dtospringboot.dto.SubclassificationDTO;
+import com.dtospringboot.model.SubClassification;
+import com.dtospringboot.service.SubClassificationservice;
+
+@Service
+public class SubclassificationDTOMapper {
+	@Autowired
+	private SubClassificationservice subclassificationservice;
+	
+	ModelMapper modelMapper = new ModelMapper();
+
+	PropertyMap<SubclassificationDTO, SubClassification> subclassificationMap = new PropertyMap<SubclassificationDTO, SubClassification>() {
+		protected void configure() {
+			map().setSubclassificationName(source.getSubName());
+			map().getClassification().setClassId(source.getMainId());
+//			  map().getSubClassification().setSubClassId(source.getSubClassId());
+		}
+	};
+	
+	@SuppressWarnings("unused")
+	private SubclassificationDTO EntityToDTO(SubClassification subClassification) {
+		SubclassificationDTO subclassDTO = modelMapper.map(subClassification, SubclassificationDTO.class);
+		return subclassDTO ;
+	}
+
+	public SubClassification savesubclassification(SubclassificationDTO subClassificationDTO) {
+		TypeMap<SubclassificationDTO, SubClassification> typeMap = modelMapper.getTypeMap(SubclassificationDTO.class,
+				SubClassification.class);
+		if (typeMap == null) {
+			modelMapper.addMappings(subclassificationMap);
+		}
+
+		SubClassification subclassification = modelMapper.map(subClassificationDTO,SubClassification.class);
+		return subclassificationservice.save(subclassification);
+	}
+
+}

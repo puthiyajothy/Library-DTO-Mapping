@@ -1,0 +1,32 @@
+package com.dtospringboot.dto;
+
+public class SubclassificationDTO {
+	
+	private Long subId;
+	private String subName;
+	private Long mainId;
+	
+	public Long getSubId() {
+		return subId;
+	}
+	public void setSubId(Long subId) {
+		this.subId = subId;
+	}
+	public String getSubName() {
+		return subName;
+	}
+	public void setSubName(String subName) {
+		this.subName = subName;
+	}
+	public Long getMainId() {
+		return mainId;
+	}
+	public void setMainId(Long mainId) {
+		this.mainId = mainId;
+	}
+	
+	
+	
+	
+
+}

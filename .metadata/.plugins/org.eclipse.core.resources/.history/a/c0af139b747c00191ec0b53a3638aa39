@@ -1,0 +1,7 @@
+package com.dtospringboot.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SubClassificationRepository extends JpaRepository<SubClassification, Long> {
+
+}

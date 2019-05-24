@@ -1,0 +1,7 @@
+package com.dtospringboot.model;
+
+
+public class SubClassification  implements Serializable{
+	
+
+	}

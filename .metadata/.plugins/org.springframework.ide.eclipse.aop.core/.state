@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Classification-1"/>
+<aop-project name="library"/>
+<aop-project name="springboot"/>
+</aop-reference-model>

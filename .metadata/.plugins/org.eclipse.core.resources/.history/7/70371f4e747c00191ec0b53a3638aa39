@@ -1,0 +1,5 @@
+package com.dtospringboot.mapper;
+
+public class SubclassificationDTOMapper {
+
+}

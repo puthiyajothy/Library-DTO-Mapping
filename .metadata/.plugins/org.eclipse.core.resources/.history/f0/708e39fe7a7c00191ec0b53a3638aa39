@@ -1,0 +1,28 @@
+package com.dtospringboot.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.dtospringboot.model.SubClassification;
+import com.dtospringboot.repository.SubClassificationRepository;
+
+
+public class SubclassificationServiceImp  implements SubClassificationservice{
+
+	
+	@Autowired
+	private SubClassificationRepository subclassificationRepositoty;
+	
+	@Override
+	public SubClassification save(SubClassification subClassification) {
+		return subclassificationRepositoty.save(subClassification);
+	}
+
+	@Override
+	public List<SubClassification> getAllsubclassification() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

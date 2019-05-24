@@ -3,9 +3,12 @@ package com.dtospringboot.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+
 import javax.persistence.Table;
 
 @SuppressWarnings("serial")
@@ -19,6 +22,9 @@ public class Classification implements Serializable{
 	private Long classId;
 	private String className;
 	
+	
+	
+
 	public Long getClassId() {
 		return classId;
 	}
